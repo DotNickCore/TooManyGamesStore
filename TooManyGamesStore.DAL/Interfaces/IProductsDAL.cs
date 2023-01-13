@@ -9,7 +9,8 @@ namespace TooManyGamesStore.DAL.Interfaces
 {
     public interface IProductsDAL
     {
-        async Product GetProductById(int id);
-
+        Product GetProductById(int id);
+        List<Product> GetAllProducts();
+        List<Product> GetAvailableProducts();
     }
 }

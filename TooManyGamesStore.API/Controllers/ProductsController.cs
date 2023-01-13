@@ -17,7 +17,21 @@ namespace TooManyGamesStore.API.Controllers
 
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<string> GetProducts()
+        public ActionResult<string> GetAllProducts()
+        {
+            try
+            {
+                return Ok(JsonSerializer.Serialize(""));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Route("[action]")]
+        [HttpGet]
+        public ActionResult<string> GetAvailableProducts()
         {
             try
             {
